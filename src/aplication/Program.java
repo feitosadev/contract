@@ -30,11 +30,11 @@ public class Program {
 		Contract contract = new Contract(ContractNumber, date, totalValue);
 		
 		System.out.print("Entre com o número de parcelas: ");
-		int numeroDeParcelas = entry.nextInt();
+		int numberInterest = entry.nextInt();
 		
 		ContractService contractService = new ContractService(new PayPalService());
 		
-		contractService.processContract(contract, numeroDeParcelas);
+		contractService.processContract(contract, numberInterest);
 		
 		System.out.println("Parcelas.");
 		for(Installment installment : contract.getInstallments()) {

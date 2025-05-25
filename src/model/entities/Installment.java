@@ -8,7 +8,7 @@ public class Installment {
 	private LocalDate date;
 	private Double amount;
 	
-	//private static DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	private static DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	
 	public Installment() {
 	}
@@ -36,8 +36,6 @@ public class Installment {
 
 	@Override
 	public String toString() {
-		return date.format(dateTimeFormatter) + " - " + String.format("%2f", amount) ;
-	}
-	
-	
+		return date.format(dateTimeFormatter) + " - " + String.format("%.2f", amount) ;
+	}	
 }
